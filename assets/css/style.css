@@ -81,6 +81,22 @@ textarea {
 }
 
 /*--------------------*/
+@-webkit-keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 /*--------------------ХЭДЕР--------------------*/
 body {
   font-family: "Montserrat", sans-serif;
@@ -173,6 +189,19 @@ body {
 }
 .header_nav ul li {
   margin-right: 42px;
+  position: relative;
+}
+.header_nav ul li:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #fff;
+  -webkit-animation: line 1s linear;
+          animation: line 1s linear;
+  width: 100%;
 }
 .header_nav ul li a {
   font-weight: 500;
@@ -219,8 +248,8 @@ body {
     right: -100%;
     top: 0;
     height: 100vh;
-    max-width: 360px;
-    padding: 68px 40px 38px;
+    max-width: 260px;
+    padding: 68px 24px 38px;
     margin: 0;
     background: #fff;
     opacity: 1;
@@ -1403,6 +1432,14 @@ body {
 @media (max-width: 800px) {
   .main_container_2_wrap {
     margin-top: 60px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1416,9 +1453,10 @@ body {
     z-index: 2;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main_container_2_left {
     width: 100%;
+    padding-bottom: 0px;
   }
 }
 .main_container_2_left .title {
@@ -1480,9 +1518,9 @@ body {
     width: 48%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main_container_2_right {
-    display: none;
+    width: 100%;
   }
 }
 .main_container_2_right .man {
@@ -1500,6 +1538,16 @@ body {
     z-index: 2;
   }
 }
+@media (max-width: 650px) {
+  .main_container_2_right .man {
+    width: 76%;
+    height: auto;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
 @media (max-width: 900px) {
   .main_container_2_right .circle {
     width: 150%;
@@ -1507,6 +1555,12 @@ body {
     margin-left: -150px;
     position: relative;
     z-index: 1;
+  }
+}
+@media (max-width: 650px) {
+  .main_container_2_right .circle {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -1525,6 +1579,12 @@ body {
   padding-top: 108px;
   padding-bottom: 77px;
   margin-top: -58px;
+}
+@media (max-width: 650px) {
+  .main_container_3 {
+    padding-top: 68px;
+    padding-bottom: 57px;
+  }
 }
 
 .main_container_3_wrap {
@@ -1548,6 +1608,7 @@ body {
   .main_container_3_wrap .title {
     font-size: 24px;
     line-height: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1563,11 +1624,12 @@ body {
 @media (max-width: 650px) {
   .main_container_3_row {
     position: relative;
-    padding: 0 50px;
     height: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 .main_container_3_row button {
@@ -1595,6 +1657,7 @@ body {
             align-items: flex-start;
     width: 300px;
     position: relative;
+    height: 80px;
   }
 }
 .main_container_3_block .main_container_3_block_number {
@@ -1611,6 +1674,7 @@ body {
 @media (max-width: 650px) {
   .main_container_3_block .main_container_3_block_number {
     font-size: 50px;
+    width: 70px;
   }
 }
 .main_container_3_block .main_container_3_block_text {
@@ -1629,8 +1693,8 @@ body {
 }
 @media (max-width: 650px) {
   .main_container_3_block .main_container_3_block_text {
-    width: auto;
     padding-left: 10px;
+    width: 230px;
   }
 }
 
@@ -1645,7 +1709,7 @@ body {
 }
 @media (max-width: 650px) {
   .main_container_3_btn {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 }
 .main_container_3_btn .btn {
@@ -1918,6 +1982,19 @@ body {
   font-size: 16px;
   line-height: 25px;
   color: #FFFFFF;
+  position: relative;
+}
+.footer_container .footer_block_1 ul li a:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #fff;
+  -webkit-animation: line 1s linear;
+          animation: line 1s linear;
+  width: 100%;
 }
 .footer_container .footer_block_2 {
   width: 357px;
@@ -1976,6 +2053,19 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #fff;
+  position: relative;
+}
+.footer_container .footer_block_3 ul li a:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #fff;
+  -webkit-animation: line 1s linear;
+          animation: line 1s linear;
+  width: 100%;
 }
 
 /*-----------------------МОБИЛЬНОЕ МЕНЮ----------------------------------*/
